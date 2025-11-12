@@ -11,13 +11,15 @@ param identityName string
 param targetAutoDeletionTime string
 
 
-module phiOnlineEndpoint 'phi-online-endpoint.bicep' = {
-  name: 'phiOnlineEndpoint'
+
+
+module qwenOnlineEndpoint 'qwen-online-endpoint.bicep' = {
+  name: 'qwenOnlineEndpoint'
   params: { 
     aiProjectName: aiProjectName
     location:location
     managedIdentityName: identityName
-    onlineEndpointName:'phi-${environmentName}-${resourceToken}'
+    onlineEndpointName:'qwen-${environmentName}-${resourceToken}'
     targetAutoDeletionTime:targetAutoDeletionTime
   }
 

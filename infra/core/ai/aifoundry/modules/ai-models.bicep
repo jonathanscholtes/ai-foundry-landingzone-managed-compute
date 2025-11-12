@@ -2,11 +2,11 @@
 @description('Name of the Azure AI Services instance')
 param aiServicesName string
 
-
-
 resource aiServices 'Microsoft.CognitiveServices/accounts@2023-05-01' existing = {
   name: aiServicesName
 }
+
+
 
 resource gpt4oDeployment 'Microsoft.CognitiveServices/accounts/deployments@2023-05-01' = {
   parent: aiServices
