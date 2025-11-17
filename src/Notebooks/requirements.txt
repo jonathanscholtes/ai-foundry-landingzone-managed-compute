@@ -1,0 +1,4 @@
+agent-framework
+azure-ai-inference
+semantic-kernel
+python-dotenv==1.0.0
